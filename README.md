@@ -14,7 +14,8 @@ The brain of such a module is [ESP32][esp32ref] microcontroller, a low-powered w
 - Various weather info are available: temperature, feels-like temperature, min/max temperature, pressure, humidity, wind speed, visibility
 - Temperature status LEDs: red (hot), green (normal), blue (cold)
 - Weather temperature LED (yellow) and buzzer: in case of rain or snow
-- Changing texts color when a status is not normal (e.g. high wind speed, low visibility, rain) 
+- Change texts color when a status is not normal (e.g. high wind speed, low visibility, rain) 
+- report date and time of the latest update
 
 
 ## Prerequisites
@@ -46,8 +47,8 @@ The wiring is pretty straightforward as follows:
 - Buzzer pin ➡ 15
 
 
-## Code
-A few parameters have to be known and set in the code beforehand:
+## Code adjustment
+A few parameters have to be known and set beforehand in the code.
 - SSID                  : WiFi network's name
 - PASSWORD              : WiFi password
 - APIKEY                : Open weather map api key (see the references)
@@ -66,9 +67,13 @@ String city = "CITY";                // e.g. Antwerp
 String countryCode = "COUNTRY";      // e.g. BE
 unsigned long timezone = "TIMEZONE"  // e.g. 7200 (GMT+2)
 ```
+_Note_: other parameters have default values but they can be adjusted as well.
 
 
-<!-- References -->
+## References
 [esp32ref]: https://en.wikipedia.org/wiki/NodeMCU
 [openweatherref]: https://openweathermap.org/
 [apikeyref]: https://randomnerdtutorials.com/esp32-http-get-open-weather-map-thingspeak-arduino/
+- [ESP32 HTTP GET with Arduino IDE (OpenWeatherMap.org and ThingSpeak)][apikeyref]
+- [ESP32 development board with 1.8" SPI TFT LCD 128x160 module](http://acoptex.com/project/1515/basics-project-070p-esp32-development-board-with-18-spi-tft-lcd-128x160-module-at-acoptexcom/#sthash.C8gmE9Za.dpbs)
+- [Getting Date and Time with ESP32 on Arduino IDE (NTP Client)](https://randomnerdtutorials.com/esp32-ntp-client-date-time-arduino-ide/)
