@@ -90,8 +90,8 @@ unsigned long timezone = "TIMEZONE"  // e.g. 7200 (GMT+2)
 #define M2KM          0.001   // m to km
 
 // For a final application, limit the API call per hour/minute to avoid getting blocked/banned
-unsigned long lastTime = 0;
-unsigned long timerDelay = 300000;   // miliseconds
+// Pulling time in Milliseconds
+unsigned long timerDelay = 300000;  
 
 // **********************************************************************************
 
@@ -101,6 +101,7 @@ WiFiUDP ntpUDP;
 NTPClient timeClient(ntpUDP);
 
 bool entrance = true;
+unsigned long lastTime = 0;
 String jsonBuffer;
 String formattedDate;
 String dayStamp;
