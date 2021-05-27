@@ -28,6 +28,7 @@ The brain of the module is [ESP32][esp32ref] microcontroller, a low-powered with
     - 1.8 SPI TFT 128x160 display 
     - Four LEDs (red, green, blue, and yellow)
     - A Piezo buzzer
+    - Few 100 Ohm resistors for LEDs
     - A breadboard and some wires (or soldering prototype board)
 - Software
     - Arduino IDE with [ESP32 Add-on](https://randomnerdtutorials.com/installing-the-esp32-board-in-arduino-ide-windows-instructions/)
