@@ -89,9 +89,9 @@ Blow parameters work just fine with their default values but they can be also ad
 #define HUMIDITY_HIGH   90.0  // Percent
 
 // Define settings for buzzer
-#define BUZZER_PIN      15
-#define BUZZER_FRQ      2000
-#define BUZZER_CHANNEL  0
+#define BUZZER_PIN      15    // pin
+#define BUZZER_FRQ      2000  // Hz
+#define BUZZER_CHANNEL  0     // PWM channel
 
 // Define pins of TFT screen
 #define TFT_CS          12    // pin
@@ -100,7 +100,7 @@ Blow parameters work just fine with their default values but they can be also ad
 #define TFT_SCLK        22    // pin
 #define TFT_MOSI        21    // pin    
 
-// Pulling time in Milliseconds
+// Pulling time in Milliseconds (e.g. 5 min)
 unsigned long timerDelay = 300000; 
 ```
 
