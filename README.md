@@ -7,14 +7,14 @@ This repo shows my attempt to build a wireless _weather monitor module_ which co
 <img src="docs/perspective.JPG" alt="drawing" width="600"/>
 
 ## How does it work?
-The brain of the module is [ESP32][esp32ref] microcontroller, a low-powered with built-in WiFi and Bluetooth functionality, which submits an HTTP request to [OpenWeatherMap][openweatherref] as the weather data server. The server returns a response to the ESP32 which contains all the required information. Finally, it reads the data into JSON format, represents them in a TFT display, and reacting to them using , changing the text color, different LED indicators, or generating a gentle beep sound.
+The brain of the module is [ESP32][esp32ref] microcontroller, a low-powered with built-in WiFi and Bluetooth functionality, which submits an HTTP request to [OpenWeatherMap][openweatherref] as the weather data server. The server returns a response to the ESP32 which contains all the required information. Finally, it reads the data into JSON format, represents them in a TFT display, and reacting to them using, changing the text color, different LED indicators, or generating a gentle beep sound.
 
 
 ## Features
 - Wireless connection to WiFi
 - Various weather info are available: temperature, feels-like temperature, min/max temperature, pressure, humidity, wind speed, visibility
 - Temperature status LEDs: red (hot), green (normal), blue (cold)
-- Weather temperature LED (yellow) and buzzer: in case of extre,e weather (e.g. rain or snow)
+- Weather temperature LED (yellow) and buzzer: in case of extreme weather (e.g. rain or snow)
 - Change texts color when a status is not normal (e.g. high wind speed, low visibility, rain) 
 - Report date and time of the latest update using NTP client
 
